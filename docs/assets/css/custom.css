@@ -1,0 +1,54 @@
+/*
+===============================================================================================================================
+Put your custom CSS in this file.
+===============================================================================================================================
+*/
+
+/* CSS to better visually match Docsify pages within Canvas LMS (uncomment to use) */
+/*
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body .markdown-section {
+    font-family: "Lato","Helvetica Neue",Arial,sans-serif;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.markdown-section a:link, .markdown-section a:visited, .markdown-section a:active {
+    text-decoration: none;
+}
+
+.markdown-section a:hover {
+    text-decoration: underline;
+}
+*/
+
+.cover .cover-main a {
+        font-family: "Amiga Forever", monospace;
+        font-weight: 400;
+        font-size: 0.8em;
+        color: #000000;
+    }
+
+.cover h1 {
+        font-family: "Amiga Forever", monospace;
+        font-weight: 400;
+        font-size: 3.5em;
+        text-shadow: -6px -6px #000000;
+    }
+
+.sidebar h1 {
+        font-family: "Amiga Forever", monospace;
+        font-weight: 400;
+        font-size: 1.2em;
+        text-decoration-color: #ffffff;
+    }
+
+h2#cover-heading {
+        font-family: "Amiga Forever", monospace;
+        font-weight: 400;
+        font-size: 0.8em;
+        color: #FFFFFF;
+        text-shadow: -2px -2px #000000;
+    }
+
