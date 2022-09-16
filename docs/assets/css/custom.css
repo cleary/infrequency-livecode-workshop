@@ -37,7 +37,7 @@ body .markdown-section {
         text-shadow: -6px -6px #000000;
     }
 
-.sidebar h1 {
+.app-name-link .sidebar h1 {
         font-family: "Amiga Forever", monospace;
         font-weight: 400;
         font-size: 1.2em;
