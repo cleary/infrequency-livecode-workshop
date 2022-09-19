@@ -4,7 +4,7 @@
 
 &nbsp;
 
-## Livecoded Audio with Minitidal (Tidalcycles)
+## Audio with Minitidal (Tidalcycles)
 
 Open https://estuary.mcmaster.ca and enter "Solo Mode"
 
@@ -34,7 +34,7 @@ You can add more `bd` events to play the sound more times per cycle
 sound "bd bd bd bd"
 ```
 
-On the fourth step, the bass drum sound will be played twice
+You can create sub-groups within the cycle
 
 ```
 sound "bd bd bd [bd bd]"
@@ -57,13 +57,11 @@ Here are some other sounds to try
 | `~` | `hh` | `cp` | `sd` | `sprvibe` | `flbass` |
 |-----|------|------|------|-----------|----------|
 
-You can make a pattern play faster using `fast`
+You can make a pattern play faster using `fast` (or slower, using `slow`)
 
 ```
 fast 2 $ sound "bd ~ [cp bd] bd"
 ```
-
-What do you think `slow` might do instead of `fast`?
 
 `# speed` is an effect to change the pitch of a note, making the pitch higher or lower
 
@@ -101,7 +99,7 @@ If a sound plays for a long time and overlaps with the next sound, you can use `
 sound "moog" # cut 1
 ```
 
-*Note: you can see all the sounds by typing `!localview audiomap` into the terminal/chat box of a new estuary tab*
+*Note: you can see all the sounds by opening a new estuary tab, and typing `!localview audiomap` into the terminal/chat box*
 
 More functions to try:
 
@@ -113,6 +111,11 @@ More effects to try:
 | `# gain` | `# end` | `# vowel` | `# pan` | `# hcutoff` | `# cutoff` |
 |----------|---------|-----------|---------|-------------|------------|
 
+### Exercise
+
+Find a sample set not mentioned here, and create a pattern with the new sound(s). Add an effect, and modify it with a function
+
+## Visuals with Punctual
 
 Choose **Punctual** from the language selection box
 
@@ -122,6 +125,7 @@ Choose **Punctual** from the language selection box
 
 To make a circle appear on our screen, we need to tell it the **position**, the width or **diameter** we want it to have, and the **output** we want it to use (`rgb` in this case)
 
+This creates a circle in the centre of the screen (xy coordinates `[0,0]`) with a diameter of `0.5`, and sending to the 3 channel output, `rgb`:
 ```
 circle [0,0] 0.5 >> rgb;
 ```
@@ -196,7 +200,7 @@ Remember, continuous and audio reactive graphs can be used in place of **any** v
 You can create a tiled pattern of your shape using `tile`
 
 ```
-tile 4 $ circle [0,0] 0.9 >> rgb;
+tile [4,3] $ circle [0,0] 0.9 >> rgb;
 ```
 
 Here are some other functions to transform your pattern
@@ -211,7 +215,7 @@ Colours can be changed by adding a list to the end of our pattern
 circle [0,0] 0.9 * [0.2,0.1,0.8] >> rgb;
 ```
 
-Each number in this list represents an amount of `red`, `green` and `blue`, because we are using the rgb output
+Each number in this list represents an amount of `red`, `green` and `blue` channels, because we are using the rgb output which supports 3 channels
 
 If we use the `hsv` output, the numbers in the list represent `hue` (colour), `saturation` (intensity of colour) and `value` (brightness)
 
@@ -225,5 +229,9 @@ Finally, you can create trails for moving shapes with `fdbk`
 circle [saw 0.5,0] 0.9 * [prox 0.5,1,0.5] >> hsv;
 0.95 >> fdbk
 ```
+
+### Exercise
+
+Create a shape, and apply an oscillator to one of it's positional arguments. Apply a graph (eg an audio reactive graph, or a `prox`) to it's size argument(s)
 
 **[Copyright](COPYRIGHT.md)**
