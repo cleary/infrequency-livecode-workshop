@@ -108,6 +108,7 @@ stack [
   sound "bd*4",
   sound "~ sd"
 ]
+```
 
 More functions to try:
 
