@@ -101,6 +101,14 @@ sound "moog" # cut 1
 
 *Note: you can see all the sounds by opening a new estuary tab, and typing `!localview audiomap` into the terminal/chat box*
 
+Play multiple patterns at once in the same cell
+
+```
+stack [
+  sound "bd*4",
+  sound "~ sd"
+]
+
 More functions to try:
 
 | `rev` | `palindrome` | `hurry` | `chop` | `sometimes` | `someCyclesBy` |
