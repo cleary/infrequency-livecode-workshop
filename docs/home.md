@@ -2,7 +2,7 @@
 
 # A Livecoding Workshop
 
-&nbsp;
+---
 
 ## Audio with Minitidal (Tidalcycles)
 
@@ -114,6 +114,14 @@ More effects to try:
 ### Exercise
 
 Find a sample set not mentioned here, and create a pattern with the new sound(s). Add an effect, and modify it with a function
+
+```
+-- example: 
+jux rev $ -- jux rev function
+sound "~ jazz:5*2 ~ jazz:5(3,8)" -- jazz:5 sample
+# hcutoff "<0 1000>" -- hcutoff (high pass filter) effect
+```
+---
 
 ## Visuals with Punctual
 
@@ -232,6 +240,41 @@ circle [saw 0.5,0] 0.9 * [prox 0.5,1,0.5] >> hsv;
 
 ### Exercise
 
-Create a shape, and apply an oscillator to one of it's positional arguments. Apply a graph (eg an audio reactive graph, or a `prox`) to it's size argument(s)
+Create a shape, and apply an oscillator to one of it's positional arguments/coordinates. Apply a graph (eg an audio reactive graph) to it's size argument(s)
+
+```
+rect [0,saw 0.1] -- positional arguments/coordinates
+[0.8, fft fx] -- size arguments, make sure you have some audio playing!
+>> rgb
+```
+
+---
+
+# Further Reading
+
+ - DECODED -- Advanced version of this workshop: https://decoded.livecode.au
+ - Tidalcycles Documentation: https://tidalcycles.org/doc
+ - Estuary Wiki: https://github.com/dktr0/estuary/wiki
+ - Punctual: https://github.com/dktr0/Punctual
+
+# Community
+
+ - Tidalcycles forums: https://club.tidalcycles.org
+ - Tidalcycles discord: https://discord.gg/wXkGbJ65Mb
+ - Estuary discord: https://discord.gg/E9vuAUBAeW
+ - Toplap: https://toplap.org/
+ - Toplap discord: https://discord.gg/pYrVh6VBBH
+ - Experimental community: https://clang.gg
+
+# More Livecoding Languages
+ - hydra (visual): https://hydra.ojack.xyz/
+ - strudel (audio/visual): https://strudel.tidalcycles.org/
+ - Sonic Pi (audio): https://sonic-pi.net/
+ - ORCA (audio/sequencer): https://hundredrabbits.itch.io/orca
+ - SuperCollider (audio): https://supercollider.github.io/
+ - ertdfgcvb (visual/ascii): https://play.ertdfgcvb.xyz/
+ - Gibber (audio/visual): https://gibber.cc/alpha/playground/
+ - improviz (visual): https://improviz.rumblesan.com/
+ - cascade (audio/visual): https://raphaelbastide.com/cascade/
 
 **[Copyright](COPYRIGHT.md)**
