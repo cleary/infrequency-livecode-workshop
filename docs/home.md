@@ -265,6 +265,7 @@ rect [0,saw 0.1] -- positional arguments/coordinates
  - Tidalcycles Documentation: https://tidalcycles.org/doc
  - Estuary Wiki: https://github.com/dktr0/estuary/wiki
  - Punctual: https://github.com/dktr0/Punctual
+ - My livecode sets/snippets/helpers: https://github.com/cleary/livecode/
 
 # Community
 
